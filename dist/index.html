@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ezChat</title>
+    <link rel="icon" type="image/png" sizes="180x180" href="/images/chat.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <style>
+        body{
+        font-family: Nunito !important;
+        background-image: linear-gradient(to right, #4e54c8, #8f94fb);
+        }
+        .container{
+            max-width: 600px;
+        }
+        .time{
+            color: rgb(176, 176, 176);
+            font-size: 0.7em;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center text-white fw-bold">
+            ezChat <img src="/images/chat.png" width="25" alt="">
+        </h1>
+        <p class="text-center text-white fst-italic">Chatting made easy.....</p>
+
+        <div class="chatroom-buttons text-center">
+            <button class="btn btn-info text-white" id="technology">#Technology</button>
+            <button class="btn btn-info  text-white" id="science">#Science</button>
+            <button class="btn btn-info  text-white" id="gaming">#Gaming</button>
+            <button class="btn btn-info  text-white" id="sport">#Sport</button>
+            <button class="btn btn-info  text-white" id="cooking">#Cooking</button>
+        </div>
+
+        <div class="conversation">
+            <ul class="chat-list list-group mt-4"></ul>
+        </div>
+        <form class="addMessage">
+            <div class="input-group mt-4">
+                <span class="input-group-text" id="message">Message:</span>
+                <input type="text" class="form-control" name="message" placeholder="Hi there!" required>
+                <button type="submit" class="input-group-text btn btn-info text-white" value="send" id="sendMessage">Send</button>
+            </div>    
+        </form>
+
+        <form class="updateUsername">
+            <div class="my-1">
+                <label for="basic-url" class="form-label"></label>
+                <div class="input-group">
+                    <span class="input-group-text">Update username:</span>
+                    <input type="text" class="form-control" name="username" required>
+                    <button type="submit" class="input-group-text btn btn-info text-white" value="update" id="updateName">Update</button>
+                </div>
+            </div>
+            <div class="form-text text-white text-center mt-2 success"></div>
+        </form>
+
+    </div>
+    <script src="bundle.js"></script>
+
+</body>
+</html>
