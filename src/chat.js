@@ -20,7 +20,7 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
-const collectionRef = collection(db, 'ezChat')
+const collectionRef = collection(db, 'userInfo')
 
 export default class Chatroom{
 
