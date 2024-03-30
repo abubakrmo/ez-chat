@@ -23,7 +23,7 @@ Once you have the project opened in your local, you'll need to follow these step
 <h1>Extending ezChat </h1>
 To enhance ezChat's appeal and functionality, presented below is a rundown of features I aim to incorporate:
 <ul>
-  <li>Implement a login and signup page</li>
+  <li>Implement a login and signup page - Working on this</li>
   <li>Allow users edit and delete messages</li>
   <li>Increase the numbers of topics available and allow users pick topics they would want to follow/discuss in</li>
 </ul>
