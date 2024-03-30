@@ -16,11 +16,32 @@
         font-family: Nunito !important;
         background-image: linear-gradient(to right, #4e54c8, #8f94fb);
         }
-    
-        @media screen and (max-width:576px) {
-         
+        .animated {
+        animation: up-down 2s ease-in-out infinite alternate-reverse both;
         }
 
+        @media (max-width: 991px) {
+        .animated {
+        -webkit-animation: none;
+        animation: none;
+        }
+        }
+        @-webkit-keyframes up-down {
+        0% {
+        transform: translateX(10px);
+        }
+        100% {
+        transform: translateX(-10px);
+        }
+        }
+        @keyframes up-down {
+        0% {
+        transform: translateX(10px);
+        }
+        100% {
+        transform: translateX(-10px);
+        }
+        }
     </style>
 </head>
 <body>
@@ -57,7 +78,7 @@
             </div>
 
             <div class="col-sm-6 container">
-              <img src="/images/Live-Chat-Vector-Illustration.jpg" alt="" style="width: 100%;">
+              <img src="/images/Live-Chat-Vector-Illustration.jpg" class="animated" style="width: 100%;">
             </div>
         </div>
     </div>
