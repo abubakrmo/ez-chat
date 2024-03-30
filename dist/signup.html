@@ -52,28 +52,24 @@
                 <h5 class="text-dark fw-bolder pt-4">
                     <img src="/images/chat.png" width="25" alt=""> ezChat 
                 </h5>
-                <h3 class="pt-5 pb-3">Create your ezChat account</h3>
-                <form action="">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="John Doe" class="form-control">
-                </form>
-                <form action="" class="mt-4">
+                <h3 class="pt-5 pb-3 fw-bold">Create your ezChat account</h3>
+
+                <form action="" class="signupform">
                     <label for="mail">Email</label>
-                    <input type="email" id="mail" placeholder="john@example.com" class="form-control">
-                </form>
-                <form action="" class="mt-4">
-                    <label for="code">Password</label>
+                    <input type="email" name="useremail" id="mail" placeholder="john@example.com" class="form-control">
+                
+                    <label for="code" class="mt-4">Password</label>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control pwd" placeholder="At least 8 characters">
+                        <input type="password" name="userpassword" class="form-control pwd" placeholder="At least 8 characters">
                         <span class="input-group-text" id=""> 
                             <img src="/images/hide password.svg" class="passwordVisibility" alt="">
                         </span>
-                      </div>
-
+                    </div>
+                    <button class="btn w-100 mt-4 text-white btn" style="background-color: #4e54c8; font-size: 15px;">
+                        Create Account
+                    </button>
                 </form>
-                <button type="button" class="btn w-100 mt-4" style="background-color: #4e54c8;">
-                    <a href="./index.html" class="text-white btn" style="font-size: 15px;">Create Account</a>
-                </button>
+
                 <p class="mt-3 text-center">Already have an account? <a href="./login.html" style="color: #4e54c8;">Sign in</a></p>
             </div>
 
