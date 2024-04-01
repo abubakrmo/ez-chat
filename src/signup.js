@@ -64,7 +64,12 @@ signupform.addEventListener('submit', e=>{
             window.open('/dist/login.html')
         })
         .catch(err=>{
-            console.log(err.message)
+            const passwordStrength = document.querySelector('.pwdStrengthFeedback')
+            const strength = new Error("Password should be at least 6 characters.")
+            passwordStrength.textContent = strength
+            setTimeout(()=>{
+                passwordStrength.classList.add('d-none')
+            }, 1000)
         })
     }else{
         const pwdfeedback = document.querySelector('.error-feedback')
