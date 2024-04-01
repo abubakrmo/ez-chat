@@ -14,7 +14,22 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const auth = getAuth()
-
+//Toggles password visibility for password input field
+const togglevisibility = document.querySelector('.visibilitytoggler')
+const passwordVisibility = document.querySelector('.passwordVisible')
+const passwordHidden = document.querySelector('.passwordHidden')
+togglevisibility.addEventListener('click', () =>{
+    const password = document.querySelector('.pwd')
+    if(password.type === "password"){
+        password.type = "text";
+        passwordVisibility.classList.add('d-none')
+        passwordHidden.classList.remove('d-none')
+    }else{
+        password.type = "password"
+        passwordVisibility.classList.remove('d-none')
+        passwordHidden.classList.add('d-none')
+    }
+})
 
 // const loginform = document.querySelector('.signupform')
 // loginform.addEventListener('submit', e=>{
