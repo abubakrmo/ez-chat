@@ -12,20 +12,39 @@ const firebaseConfig = {
   };
 
 initializeApp(firebaseConfig);
-
-
-
-
-const makeVisible = document.querySelector('.passwordVisibility')
-makeVisible.addEventListener('click', () =>{
+//Toggles password visibility for password input field
+const togglevisibility = document.querySelector('.visibilitytoggler')
+const passwordVisibility = document.querySelector('.passwordVisible')
+const passwordHidden = document.querySelector('.passwordHidden')
+togglevisibility.addEventListener('click', () =>{
     const password = document.querySelector('.pwd')
     if(password.type === "password"){
         password.type = "text";
+        passwordVisibility.classList.add('d-none')
+        passwordHidden.classList.remove('d-none')
     }else{
         password.type = "password"
+        passwordVisibility.classList.remove('d-none')
+        passwordHidden.classList.add('d-none')
     }
 })
 
+//Toggles password visibility for confirm password input field
+const ctogglevisibility = document.querySelector('.cvisibilitytoggler')
+const confirmPasswordVisibility = document.querySelector('.cpasswordVisible')
+const confirmPasswordHidden = document.querySelector('.cpasswordHidden')
+ctogglevisibility.addEventListener('click', () =>{
+    const password = document.querySelector('.cpwd')
+    if(password.type === "password"){
+        password.type = "text";
+        confirmPasswordVisibility.classList.add('d-none')
+        confirmPasswordHidden.classList.remove('d-none')
+    }else{
+        password.type = "password"
+        confirmPasswordVisibility.classList.remove('d-none')
+        confirmPasswordHidden.classList.add('d-none')
+    }
+})
 
 const auth = getAuth()
 const signupform = document.querySelector('.signupform')

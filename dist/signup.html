@@ -61,15 +61,18 @@
                     <label for="code" class="mt-4">Password</label>
                     <div class="input-group mb-3">
                         <input type="password" name="userpassword" class="form-control pwd">
-                        <span class="input-group-text" id=""> 
-                            <img src="/images/eye.svg" class="passwordVisibility" style="height: 25px; width: 25px;">
+                        <span class="input-group-text visibilitytoggler" id=""> 
+                            <img src="/images/eye.svg" class="passwordVisible" style="height: 25px; width: 25px;">
+                            <img src="/images/eye-crossed.svg" class="passwordHidden d-none" style="height: 25px; width: 25px;">
                         </span>
                     </div>
+
                     <label for="code" class="mt-2">Confirm password</label>
                     <div class="input-group mb-3">
-                        <input type="password" name="confirmpassword" class="form-control confirmpwd">
-                        <span class="input-group-text" id=""> 
-                            <img src="/images/eye.svg" class="passwordVisibility" style="height: 25px; width: 25px;">
+                        <input type="password" name="confirmpassword" class="form-control cpwd">
+                        <span class="input-group-text cvisibilitytoggler" id=""> 
+                            <img src="/images/eye.svg" class="cpasswordVisible" style="height: 25px; width: 25px;">
+                            <img src="/images/eye-crossed.svg" class="cpasswordHidden d-none" style="height: 25px; width: 25px;">
                         </span>
                     </div>
                     <button class="btn w-100 mt-4 text-white btn" style="background-color: #4e54c8; font-size: 15px;">
