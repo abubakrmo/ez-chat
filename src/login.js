@@ -31,14 +31,22 @@ togglevisibility.addEventListener('click', () =>{
     }
 })
 
-// const loginform = document.querySelector('.signupform')
-// loginform.addEventListener('submit', e=>{
-//     e.preventDefault();
+const loginform = document.querySelector('.loginform')
+loginform.addEventListener('submit', e=>{
+    e.preventDefault();
     
-//     const email = signupform.useremail.value;
-//     const password = signupform.userpassword.value;
-//     const cpassword = signupform.confirmpassword.value
-// }
-// )
+    const email = loginform.useremail.value;
+    const password = loginform.userpassword.value;
+    signInWithEmailAndPassword(auth, email, password)
+        .then(()=>{
+            console.log("signed in")
+        })
+        .catch((err)=>{
+            console.log(err.message)
+        })
+   
+}
+)
 
-
+//Firebase: Error (auth/invalid-credential).
+//Firebase: Error (auth/invalid-credential).

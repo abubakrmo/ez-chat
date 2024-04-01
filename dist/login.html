@@ -27,22 +27,23 @@
 
                 <h2 class="pt-2 fw-bolder">Sign in</h2>
                 <p>sign in and get chatty</p>
-                <form action="" class="mt-4">
+                <form action="" class="mt-4 loginform">
                     <label for="mail">Email</label>
-                    <input type="email" id="mail" placeholder="john@example.com" class="form-control" required>
+                    <input type="email" id="mail" name="useremail" placeholder="john@example.com" class="form-control" required>
    
                     <label for="code" class="mt-3">Password</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-2">
                         <input type="password" name="userpassword" class="form-control pwd" required>
                         <span class="input-group-text visibilitytoggler" id=""> 
                             <img src="/images/eye.svg" class="passwordVisible" style="height: 25px; width: 25px;">
                             <img src="/images/eye-crossed.svg" class="passwordHidden d-none" style="height: 25px; width: 25px;">
                         </span>
                     </div>
+                    <button class="btn w-100 mt-4 text-white btn" style="background-color: #4e54c8; font-size: 15px;">
+                        Sign in
+                    </button>
                 </form>
-                <button class="btn w-100 mt-4 text-white btn" style="background-color: #4e54c8; font-size: 15px;">
-                    Sign in
-                </button>
+
                 <p class="mt-3 text-center">Don't have an account? <a href="./signup.html" style="color: #4e54c8;">Sign up</a></p>
             </div>
 
