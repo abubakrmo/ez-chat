@@ -12,6 +12,7 @@ const firebaseConfig = {
   };
 
 initializeApp(firebaseConfig);
+
 //Toggles password visibility for password input field
 const togglevisibility = document.querySelector('.visibilitytoggler')
 const passwordVisibility = document.querySelector('.passwordVisible')
@@ -53,9 +54,10 @@ signupform.addEventListener('submit', e=>{
     
     const email = signupform.useremail.value;
     const password = signupform.userpassword.value;
+    const cpassword = signupform.confirmpassword.value
 
-   
-    createUserWithEmailAndPassword(auth, email, password)
+    if(password === cpassword){
+        createUserWithEmailAndPassword(auth, email, password)
         .then(cred =>{
             console.log(cred.user)
             alert('User created succesfully')
@@ -64,4 +66,12 @@ signupform.addEventListener('submit', e=>{
         .catch(err=>{
             console.log(err.message)
         })
+    }else{
+        const pwdfeedback = document.querySelector('.error-feedback')
+        pwdfeedback.classList.remove('d-none')
+        setTimeout(()=>{
+            pwdfeedback.classList.add('d-none')
+        }, 1000)
+    }
+
 })

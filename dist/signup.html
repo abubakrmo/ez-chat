@@ -53,14 +53,16 @@
                     <img src="/images/chat.png" width="25" alt=""> ezChat 
                 </h5>
                 <h3 class="pt-5 pb-3 fw-bold">Create your ezChat account</h3>
-
                 <form action="" class="signupform">
                     <label for="mail">Email</label>
-                    <input type="email" name="useremail" id="mail" placeholder="john@example.com" class="form-control">
-                
-                    <label for="code" class="mt-4">Password</label>
+                    <input type="email" name="useremail" id="mail" placeholder="john@example.com" class="form-control has-validation" required>
+                    <div class="invalid-feedback">
+                        Provide a valid email address
+                    </div>
+
+                    <label for="code" class="mt-3">Password</label>
                     <div class="input-group mb-3">
-                        <input type="password" name="userpassword" class="form-control pwd">
+                        <input type="password" name="userpassword" class="form-control pwd" required>
                         <span class="input-group-text visibilitytoggler" id=""> 
                             <img src="/images/eye.svg" class="passwordVisible" style="height: 25px; width: 25px;">
                             <img src="/images/eye-crossed.svg" class="passwordHidden d-none" style="height: 25px; width: 25px;">
@@ -68,13 +70,14 @@
                     </div>
 
                     <label for="code" class="mt-2">Confirm password</label>
-                    <div class="input-group mb-3">
-                        <input type="password" name="confirmpassword" class="form-control cpwd">
+                    <div class="input-group mb-2">
+                        <input type="password" name="confirmpassword" class="form-control cpwd" required>
                         <span class="input-group-text cvisibilitytoggler" id=""> 
                             <img src="/images/eye.svg" class="cpasswordVisible" style="height: 25px; width: 25px;">
                             <img src="/images/eye-crossed.svg" class="cpasswordHidden d-none" style="height: 25px; width: 25px;">
                         </span>
                     </div>
+                    <span class="text-danger error-feedback d-none"> Passwords do not match!</span>
                     <button class="btn w-100 mt-4 text-white btn" style="background-color: #4e54c8; font-size: 15px;">
                         Create Account
                     </button>
@@ -83,10 +86,13 @@
                 <p class="mt-3 text-center">Already have an account? <a href="./login.html" style="color: #4e54c8;">Sign in</a></p>
             </div>
 
+
             <div class="col-sm-6 container">
               <img src="/images/Live-Chat-Vector-Illustration.jpg" class="animated" style="width: 100%;">
             </div>
         </div>
+
+        
     </div>
     <script src="./bundleTwo.js"></script>
 </body>
