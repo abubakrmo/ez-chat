@@ -16,7 +16,14 @@ initializeApp(firebaseConfig);
 const auth = getAuth()
 
 
-
-
+// const loginform = document.querySelector('.signupform')
+// loginform.addEventListener('submit', e=>{
+//     e.preventDefault();
+    
+//     const email = signupform.useremail.value;
+//     const password = signupform.userpassword.value;
+//     const cpassword = signupform.confirmpassword.value
+// }
+// )
 
 
