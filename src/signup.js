@@ -78,9 +78,10 @@ signupform.addEventListener('submit', e=>{
             console.log(cred.user)
             const snackbar = new Snackbar();
             snackbar.createSnackbar();
-            snackbar.displaySnackbar("User created succesfully!")
-            
-            // window.open('/dist/login.html')
+            snackbar.displaySnackbar("Congratulations! You've successfully signed up! 🚀 Welcome aboard!")
+            setTimeout(()=>{
+                window.location.href = '/dist/login.html'
+            },3500)
         })
         .catch(err=>{
             const passwordStrength = document.querySelector('.pwdStrengthFeedback')
@@ -88,7 +89,7 @@ signupform.addEventListener('submit', e=>{
             passwordStrength.textContent = strength
             setTimeout(()=>{
                 passwordStrength.classList.add('d-none')
-            }, 1000)
+            }, 3000)
         })
     }else{
         const pwdfeedback = document.querySelector('.error-feedback')
