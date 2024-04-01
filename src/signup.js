@@ -12,6 +12,22 @@ const firebaseConfig = {
   };
 
 initializeApp(firebaseConfig);
+class Snackbar{
+    constructor(){
+        this.snackbar = document.createElement('div')
+    }
+    createSnackbar(){
+        this.snackbar.classList.add('snackBar')
+        document.querySelector('body').appendChild(this.snackbar)
+    }
+    displaySnackbar(message){
+        this.snackbar.textContent = message;
+        this.snackbar.classList.add('active')
+        setTimeout(()=>{
+            this.snackbar.classList.remove('active')
+        }, 3000)
+    }
+}
 
 //Toggles password visibility for password input field
 const togglevisibility = document.querySelector('.visibilitytoggler')
@@ -60,8 +76,11 @@ signupform.addEventListener('submit', e=>{
         createUserWithEmailAndPassword(auth, email, password)
         .then(cred =>{
             console.log(cred.user)
-            alert('User created succesfully')
-            window.open('/dist/login.html')
+            const snackbar = new Snackbar();
+            snackbar.createSnackbar();
+            snackbar.displaySnackbar("User created succesfully!")
+            
+            // window.open('/dist/login.html')
         })
         .catch(err=>{
             const passwordStrength = document.querySelector('.pwdStrengthFeedback')
@@ -80,3 +99,8 @@ signupform.addEventListener('submit', e=>{
     }
 
 })
+
+
+
+
+
