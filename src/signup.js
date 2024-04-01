@@ -84,9 +84,14 @@ signupform.addEventListener('submit', e=>{
             },3500)
         })
         .catch(err=>{
-            const passwordStrength = document.querySelector('.pwdStrengthFeedback')
-            const strength = new Error("Password should be at least 6 characters.")
-            passwordStrength.textContent = strength
+            const passwordStrength = document.querySelector('.userandpwdCheck')
+            if(err.message == "Firebase: Password should be at least 6 characters (auth/weak-password)."){
+                const strength = new Error("Password should be at least 6 characters.")
+                passwordStrength.textContent = strength
+            }else if(err.message == "Firebase: Error (auth/email-already-in-use)."){
+                const userexists = new Error("User already exists.")
+                passwordStrength.textContent = userexists
+            }
             setTimeout(()=>{
                 passwordStrength.classList.add('d-none')
             }, 3000)
