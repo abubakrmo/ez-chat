@@ -34,19 +34,25 @@ togglevisibility.addEventListener('click', () =>{
 const loginform = document.querySelector('.loginform')
 loginform.addEventListener('submit', e=>{
     e.preventDefault();
-    
     const email = loginform.useremail.value;
     const password = loginform.userpassword.value;
     signInWithEmailAndPassword(auth, email, password)
         .then(()=>{
-            console.log("signed in")
+            setTimeout(()=>{
+                window.location.href = '/dist/index.html'
+            },1000)
         })
         .catch((err)=>{
-            console.log(err.message)
+            const credentialsCheck = document.querySelector('.credValidation')
+            if(err.message == "Firebase: Error (auth/invalid-credential)."){
+                const feedback = new Error("Incorrect login details")
+                credentialsCheck.textContent = feedback
+            }
+            setTimeout(()=>{
+                credentialsCheck.classList.add('d-none')
+            }, 3000)
         })
    
 }
 )
 
-//Firebase: Error (auth/invalid-credential).
-//Firebase: Error (auth/invalid-credential).
