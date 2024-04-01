@@ -75,7 +75,7 @@ signupform.addEventListener('submit', e=>{
     if(password === cpassword){
         createUserWithEmailAndPassword(auth, email, password)
         .then(cred =>{
-            console.log(cred.user)
+            // console.log(cred.user)
             const snackbar = new Snackbar();
             snackbar.createSnackbar();
             snackbar.displaySnackbar("Congratulations! You've successfully signed up! 🚀 Welcome aboard!")
