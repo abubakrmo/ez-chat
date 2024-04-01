@@ -20,5 +20,15 @@ module.exports = [
       },
       devtool: 'eval-source-map',
       watch: true,
-    }
+    },
+    {
+      mode: 'development',
+        entry: ['./src/login.js'],
+        output: {
+          path: path.resolve(__dirname, 'dist'),
+          filename: 'bundleThree.js' 
+        },
+        devtool: 'eval-source-map',
+        watch: true,
+      }
 ] 
