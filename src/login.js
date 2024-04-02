@@ -56,3 +56,11 @@ loginform.addEventListener('submit', e=>{
 }
 )
 
+export class Logout{
+    constructor(){
+        this.auth = auth;
+    }
+    // logout(){
+
+    // }
+}
